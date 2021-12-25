@@ -124,7 +124,7 @@ namespace Lab_6_8
             y = Int32.Parse(tmp[2]);
             setBrush(tmp[3]);
             a = Int32.Parse(tmp[4]);
-            h = Int32.Parse(tmp[5]);
+            h = double.Parse(tmp[5]);
         }
         public override string info()
         {

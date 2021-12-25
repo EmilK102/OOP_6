@@ -245,6 +245,15 @@ namespace Lab_6_8
                     tmpobj = factory.createBase(code);
                     tmpobj.load(path,tmparr);
                     lists.add(tmpobj);
+                    if(code == 'L')
+                    {
+                        int skip = Int32.Parse(tmparr[2]);
+                        while (skip!=0)
+                        {
+                            tmp = streamReader.ReadLine();
+                            skip--;
+                        }
+                    }
                 }
                 streamReader.Close();
                 PaintAll();
@@ -276,16 +285,6 @@ namespace Lab_6_8
             }
             selectNode();
         }
-        private void selectNode()
-        {
-            for(int i = 0; i < lists.getSize(); i++)
-            {
-                if (lists.getObj(i).getSelect()) {
-                    treeView1.SelectedNode = treeView1.Nodes[i];
-                    treeView1.Focus();
-                }
-            }
-        }
         private void Node(TreeNode root, Mylist mylist)
         {
             for (int i = 0; i < mylist.getSize(); i++)
@@ -294,6 +293,16 @@ namespace Lab_6_8
                 if (mylist.getObj(i).getCode() == 'L')
                     Node(root, (Mylist)mylist.getObj(i));
                 root.Nodes.Add(child);
+            }
+        }
+        private void selectNode()
+        {
+            for(int i = 0; i < lists.getSize(); i++)
+            {
+                if (lists.getObj(i).getSelect()) {
+                    treeView1.SelectedNode = treeView1.Nodes[i];
+                    treeView1.Focus();
+                }
             }
         }
 
