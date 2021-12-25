@@ -8,9 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-
-namespace Lab_6_8.Properties
+namespace OOP7._1.Properties
 {
+
+
     /// <summary>
     ///   Класс ресурсов со строгим типом для поиска локализованных строк и пр.
     /// </summary>
@@ -43,7 +44,7 @@ namespace Lab_6_8.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Lab_6_8.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("OOP6._1.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
